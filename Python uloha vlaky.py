@@ -14,10 +14,13 @@ def vagon(x,y,farba):
     w.create_oval(x+20,y+40,x+40,y+60,fill="black")
     w.create_oval(x+60,y+40,x+80,y+60,fill="black")
 
-vagon(50,50,"red")
-vagon(170,50,"red")
-vagon(290,50,"red")
-vagon(410,50,"red")
+
+r=50
+    
+for i in range (4):
+    vagon(r,50,"red")
+    r=r+120
+
 
 vagon(50,200,"green")
 vagon(170,200,"green")
