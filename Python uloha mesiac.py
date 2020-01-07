@@ -1,5 +1,6 @@
 from tkinter import *
 import random
+
 master= Tk()
 canvas_width = 800
 canvas_height = 600
@@ -60,3 +61,38 @@ for i in range (1,4):
 doublemesiac(395,275,"lightblue","darkgoldenrod",-15)
 doublemesiac(280,340,"lightblue","darkgoldenrod",-10)
 doublemesiac(150,400,"lightblue","darkgoldenrod",0)
+
+y1 = 300
+y2 = 300
+def nakresli():
+    global y1, y2
+    if y2>500 and y1<100:
+        return
+    w.delete('all')
+
+    pozadie()
+    y1-=1
+    y2+=1
+    
+    mesiac2(500,y1,"yellow" ,"white")
+    mesiac2(500, y2, "yellow","darkblue")
+   
+    flajka(10,300, "green")
+    flajka(540,300,"red")
+    doublemesiac(678,70,"lightblue","red",0)
+    mesiac2(100,70,"red","green")
+    
+    for i in range (1,4):
+        lodka(300,270,0)
+        lodka(170,330,20)
+        lodka(40,390,40)
+
+    doublemesiac(395,275,"lightblue","darkgoldenrod",-15)
+    doublemesiac(280,340,"lightblue","darkgoldenrod",-10)
+    doublemesiac(150,400,"lightblue","darkgoldenrod",0)
+    w.after(10,nakresli)
+    
+    
+
+nakresli()
+w.mainloop()
