@@ -28,6 +28,6 @@ while(x<=10):
     h = random.randint(150,300)
     j = random.randint(150,300)
     medz  =random.randint(5,10)
-    if(pstvorec2(xko,yko,h,j,medz,n)==True):
+    if(stvorec2(xko,yko,h,j,medz,n)==True):
         x+=1
     
