@@ -12,7 +12,7 @@ w.pack()
 def stvorec(x,y,width, height):
     w.create_rectangle(x-width/2,y+height/2, x+width/2, y-height/2)
 
-def popici_stvorec(x,y,width,height, space, num):
+def stvorec2(x,y,width,height, space, num):
     if(x-width/2>0 and x+width/2<canvas_width and y-height/2>0 and y+height/2<canvas_height):
         for i in range(num):
             stvorec(x,y,width-i*space*2, height-i*space*2)
@@ -28,6 +28,6 @@ while(x<=10):
     h = random.randint(150,300)
     j = random.randint(150,300)
     medz  =random.randint(5,10)
-    if(popici_stvorec(xko,yko,h,j,medz,n)==True):
+    if(pstvorec2(xko,yko,h,j,medz,n)==True):
         x+=1
     
